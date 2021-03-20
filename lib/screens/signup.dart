@@ -1,0 +1,118 @@
+import 'package:flutter/material.dart';
+
+class SignUpSehifesi extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        theme: ThemeData(primarySwatch: Colors.amber),
+        debugShowCheckedModeBanner: false,
+        home: SignUpPage());
+  }
+}
+
+class SignUpPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: (AppBar(
+        title: Text(''),
+      )),
+      resizeToAvoidBottomPadding: false,
+      body: ListView(
+        children: [
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            alignment: Alignment.bottomLeft,
+            padding: EdgeInsets.all(5),
+            child: Text(
+              'Create new account:',
+              textDirection: TextDirection.ltr,
+              style: TextStyle(
+                  fontSize: 33,
+                  color: Colors.amberAccent,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          TextField(
+            decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: const BorderRadius.all(
+                    const Radius.circular(30.0),
+                  ),
+                ),
+                contentPadding: EdgeInsets.all(20),
+                hintText: 'Full Name'),
+            keyboardType: TextInputType.name,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          TextField(
+            decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: const BorderRadius.all(
+                    const Radius.circular(30.0),
+                  ),
+                ),
+                contentPadding: EdgeInsets.all(20),
+                hintText: 'Phone Number'),
+            keyboardType: TextInputType.number,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          TextField(
+            decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: const BorderRadius.all(
+                    const Radius.circular(30.0),
+                  ),
+                ),
+                contentPadding: EdgeInsets.all(20),
+                hintText: 'Email Adres'),
+            keyboardType: TextInputType.emailAddress,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderRadius: const BorderRadius.all(
+                  const Radius.circular(30.0),
+                ),
+              ),
+              contentPadding: EdgeInsets.all(20.0),
+              hintText: 'Password',
+              filled: true,
+              hintStyle: new TextStyle(color: Colors.grey[800]),
+            ),
+            obscureText: true,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          RaisedButton(
+            onPressed: () {},
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(44),
+                side: BorderSide(color: Colors.amberAccent)),
+            child: Text(
+              '           Sign Up           ',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+            ),
+            color: Colors.amberAccent,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+        ],
+      ),
+    );
+  }
+}
